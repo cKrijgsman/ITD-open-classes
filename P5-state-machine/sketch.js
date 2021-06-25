@@ -1,5 +1,7 @@
+// stores the current state that we are in.
 let currentState = "start";
 
+// Stores the state of the keyboard
 let currentKey = null;
 let currentKeyUsed = false;
 
@@ -31,11 +33,19 @@ function draw() {
   transitions();
 }
 
+/**
+ * Checks for the keys on the key board.
+ */
 function keyPressed() {
   currentKey = key;
   currentKeyUsed = false;
 }
 
+
+/**
+ * This will render the current state on the screen.
+ * How the computer should render the states is described in the file 'states.js'
+ */
 function visualizeStates() {
   switch (currentState) {
     case "start":
@@ -53,7 +63,11 @@ function visualizeStates() {
   }
 }
 
-function transitions(){
+/**
+ * Handles all the transitions from a given state to the next.
+ * First it checks what state we are in and then it checks if the conditions for the transition are met.
+ */
+function transitions() {
     switch (currentState) {
       case "start": // Will move to middle once space is pressed.
         if (currentKey === " " && !currentKeyUsed) {

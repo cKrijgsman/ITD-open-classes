@@ -1,5 +1,5 @@
 /**
- * Visualization for the start state.
+ * Visualization code for the start state.
  */
 function startState() {
   push(); // Save canvas state
@@ -16,6 +16,9 @@ function startState() {
   pop(); // Restore canvas state
 }
 
+/**
+ * Visualization code for the left state.
+ */
 function leftState() {
   push(); // Save canvas state
 
@@ -24,6 +27,9 @@ function leftState() {
   pop(); // Restore canvas state
 }
 
+/**
+ * Visualization code for the middle state.
+ */
 function middleState(){
   push(); // Save canvas state
 
@@ -37,6 +43,9 @@ function middleState(){
   pop(); // Restore canvas state
 }
 
+/**
+ * Visualization code for the right state.
+ */
 function rightState() {
   push(); // Save canvas state
 
